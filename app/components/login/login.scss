@@ -1,0 +1,15 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  background: url(/assets/login-bg2.png) no-repeat;
+  background-size: cover; 
+
+  form {
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    transform:translateY(20vh);
+  }
+}
+
+

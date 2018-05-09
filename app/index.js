@@ -25,6 +25,11 @@ commonComponents(app);
 // App Services Entrypoint
 appServices(app);
 
+app.run(function($state) {
+  console.log('aaa');
+  $state.go('login');
+});
+
 // Router Configuration
 // Components must be declared first since
 // Routes reference controllers that will be bound to route templates.
