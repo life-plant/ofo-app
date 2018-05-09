@@ -7,7 +7,7 @@ import appServices from './services/services.js';
 import appConfiguration from './app.config';
 
 // Single Style Entry Point
-import './index.scss';
+import 'index.scss';
 
 if (ENVIRONMENT === 'test') {
   console.log('ENV:', ENVIRONMENT);

@@ -4,9 +4,9 @@
   "description": "An Application Shell for generating Angular Applications with Webpack and ES6",
   "main": "app.js",
   "scripts": {
-    "dev": "export NODE_ENV=development && webpack-dev-server --devtool=source-map --progress --colors --port=9000 --content-base app",
-    "test": "export NODE_ENV=test && karma start",
-    "build": "export NODE_ENV=production && node node_modules/.bin/webpack && cp app/index.html dist/index.html"
+    "dev": "set NODE_ENV=development && webpack-dev-server --devtool=source-map --progress --colors --port=9000 --content-base app",
+    "test": "set NODE_ENV=test && karma start",
+    "build": "set NODE_ENV=production && node node_modules/.bin/webpack && cp app/index.html dist/index.html"
   },
   "keywords": [
     "angular",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "angular": "^1.4.7",
-    "angular-ui-router": "^0.2.15",
+    "angular-ui-router": "1.x",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",

@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var nodeEnvironment = process.env.NODE_ENV
 var bourbon = require('node-bourbon').includePaths;
 var _ = require('lodash');
+var path = require('path');
 
 var config = {
   context: __dirname + '/app',
@@ -22,7 +23,8 @@ var config = {
     filename: 'bundle.js'
   },
   resolve: {
-    root: __dirname + '/app'
+    extensions: ['', '.js', '.es6'],
+    root:[ path.join(__dirname + '/app'), path.join(__dirname + '/node_modules'), path.join(__dirname) ]
   },
   jscs: {
     // JSCS errors are displayed by default as warnings.
