@@ -1,13 +1,14 @@
 <div class='login'>
   <form>
-    <div>
+    <div class="form-item">
       <label>用户名1</label>
-      <input type="text" name="username" ng-model="loginCtrl.username">
+      <input type="text" name="username" placeholder="用户名" ng-model="data.username">
     </div>
-    <div>
+    <div class="form-item">
+      <i class="fa fa-address-card" aria-hidden="true"></i>
       <label class="pass">密码</label>
-      <input type="password" name="password" ng-model="loginCtrl.password">
+      <input type="password" name="password" placeholder="密码" ng-model="data.password">
     </div>
-    <div class="提交按钮"></div>
+    <div class="submit-btn">登录</div>
   </form>
 </div>

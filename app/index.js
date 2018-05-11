@@ -1,6 +1,7 @@
 // Angular & Router ES6 Imports
 import angular from 'angular';
 import angularUIRouter from 'angular-ui-router';
+import $ from 'jquery';
 import appComponents from './components/components.js';
 import commonComponents from './common/components.js';
 import appServices from './services/services.js';
@@ -8,6 +9,10 @@ import appConfiguration from './app.config';
 
 // Single Style Entry Point
 import 'index.scss';
+//import "font-awesome/css/font-awesome.min.css";
+
+
+window.$ = $;
 
 if (ENVIRONMENT === 'test') {
   console.log('ENV:', ENVIRONMENT);
@@ -25,8 +30,9 @@ commonComponents(app);
 // App Services Entrypoint
 appServices(app);
 
-app.run(function($state) {
+app.run(function($state,loginService) {
   console.log('aaa');
+  console.log(loginService);
   $state.go('login');
 });
 

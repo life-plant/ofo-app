@@ -5,10 +5,35 @@
   background-size: cover; 
 
   form {
-    width: 300px;
+    width: 242px;
     margin: 0 auto;
     background: #fff;
-    transform:translateY(20vh);
+    transform:translateY(30vh);
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+
+  .submit-btn {
+    width: 100px;
+    height: 30px;
+    background: #EEECEC;
+    font-weight: bold;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 10px;
+    border: 1px solid #CFCECE;
+  }
+
+  .form-item {
+    margin-bottom: 10px;
+
+    label {
+      width: 57px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 }
 
