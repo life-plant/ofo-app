@@ -16,10 +16,7 @@ export default class LoginController {
   login($scope,loginService,$state) {
     var prom = loginService.checkLogin($scope.data);
     prom.then(function(response){
-      console.log(response);
-      if(response.data.status==200){
-        $state.go('home');
-      }
+        $state.go('home',{info:response.data.data});
     })
   }
 }
