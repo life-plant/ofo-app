@@ -1,9 +1,11 @@
 <navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<div class="Container home">
-  <div>
-    <h1 class="home">Found in {{ homeCtrl.name }}.html</h1>
+
+<div class="content">
+  <div class="Container home">
+    <div class="userAdmin" ui-view>
+    </div>
   </div>
 </div>
+
+<user-info></user-info>
+

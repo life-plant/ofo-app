@@ -1,6 +1,14 @@
-let usersService = function usersServiceFn () {
+let usersService = function usersServiceFn ($http) {
   return {
-    name: 'users'
+    getUsers: function(){
+      console.log('users')
+      var promise = $http({
+        method: 'GET',
+        url: 'api/users',
+        ContentType:'application/json',
+      })
+      return promise;
+    }
   };
 };
 

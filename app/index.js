@@ -1,18 +1,24 @@
 // Angular & Router ES6 Imports
 import angular from 'angular';
 import angularUIRouter from 'angular-ui-router';
-import $ from 'jquery';
+// import $ from 'jquery';
 import appComponents from './components/components.js';
 import commonComponents from './common/components.js';
 import appServices from './services/services.js';
+import appFilter from './filter/index.js';
 import appConfiguration from './app.config';
+import 'footable';
+
+//import 'footable-bootstrap/js/footable.js'
 
 // Single Style Entry Point
 import 'index.scss';
+import 'footable/css/footable.core.css';
+//import 'vendor/footable-bootstrap/css/footable.bootstrap.min.css';
 //import "font-awesome/css/font-awesome.min.css";
 
 
-window.$ = $;
+// window.$ = $;
 
 if (ENVIRONMENT === 'test') {
   console.log('ENV:', ENVIRONMENT);
@@ -30,10 +36,18 @@ commonComponents(app);
 // App Services Entrypoint
 appServices(app);
 
-app.run(function($state,loginService) {
-  console.log('aaa');
-  console.log(loginService);
+appFilter(app);
+
+app.run(function($state, loginService, $rootScope) {
+  // $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {  
+  //   console.log('stateChange');
+  //   if(toState.name!='login'){
+  //     $('active')
+  //     $('li.'+toState.name).addClass('active');
+  //   }
+  // }) 
   $state.go('login');
+
 });
 
 // Router Configuration

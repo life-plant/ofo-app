@@ -36,6 +36,21 @@ var config = {
     // JSCS errors to fail.
     failOnHint: false
   },
+  devServer: {
+      port: 9000,
+      devtool: 'source-map',
+      progress: true,
+      colors: true,
+      inline: true,
+      hot: true,
+      watchContentBase: true,
+      host: '127.0.0.1',
+      proxy: {
+          '/api/*': {
+              target: 'http://192.168.199.119:8080'
+          }
+      }
+  },
   module: {
     // preLoaders: [{
     //   test:    /\.js$/,
@@ -46,7 +61,9 @@ var config = {
       {test: /\.js$/, exclude: /(node_modules)/, loader: 'babel'},
       {test: /\.html/, exclude: /(node_modules)/, loader: 'html-loader'},
       {test: /\.s?css$/, loader: 'style!css!sass?includePaths[]=' + bourbon },
-      {test: /\.(png|jpg)$/, loader: 'url-loader?mimetype=image/png'}
+      {test: /\.(png|jpg)$/, loader: 'url-loader?mimetype=image/png'},
+      {test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader'},
+      {test:/\.(ttf|eot|svg)(\?[\s\S]+)?$/, loader: 'file-loader'}
     ]
   },
   eslint: {  
@@ -76,7 +93,7 @@ switch (nodeEnvironment) {
     break;
 
   case 'development':
-    config.entry = ['./index.js', 'webpack/hot/dev-server'];
+    config.entry = ['font-awesome-loader','./index.js', 'webpack/hot/dev-server'];
     config.devtool = 'source-map';
     break;
     

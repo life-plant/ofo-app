@@ -4,7 +4,7 @@
   "description": "An Application Shell for generating Angular Applications with Webpack and ES6",
   "main": "app.js",
   "scripts": {
-    "dev": "set NODE_ENV=development && webpack-dev-server --devtool=source-map --progress --colors --inline --hot --watchContentBase --port=9000 --content-base app",
+    "dev": "set NODE_ENV=development && webpack-dev-server --devtool=source-map --color --content-base app",
     "test": "set NODE_ENV=test && karma start",
     "build": "set NODE_ENV=production&& npm start && cp ./app/index.html dist/index.html",
     "start": "webpack"
@@ -59,15 +59,19 @@
     "babel-preset-stage-2": "^6.5.0",
     "css-loader": "^0.19.0",
     "font-awesome": "^4.7.0",
+    "font-awesome-loader": "^1.0.2",
+    "footable": "^2.0.6",
     "html-loader": "^0.3.0",
     "jquery": "^3.3.1",
     "jscs": "^3.0.5",
     "jscs-loader": "^0.3.0",
     "karma-chai": "^0.1.0",
+    "moment": "^2.22.1",
     "ng-annotate-loader": "0.0.10",
     "ngrequire-webpack-plugin": "^2.0.23",
     "node-bourbon": "^4.2.3",
     "node-sass": "^3.3.3",
+    "qs": "^6.5.2",
     "sass-loader": "^3.0.0",
     "scss-loader": "0.0.1",
     "style-loader": "^0.12.4"

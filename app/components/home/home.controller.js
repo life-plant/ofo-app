@@ -1,7 +1,6 @@
 export default class HomeController {
-  constructor($stateParams) {
-    this.name = 'home';
-    console.log($stateParams);
+  constructor($scope,$stateParams,commonService,$rootScope) {
+    commonService.username=$stateParams.username;
   }
 }
 

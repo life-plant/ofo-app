@@ -1,13 +1,13 @@
 let loginService = function loginServiceFn ($http) {
   return {
     checkLogin: function(data){
-      var promise1 = $http({
+      var promise = $http({
         method: 'POST',
-        url: '//192.168.199.119:8080/api/login',
+        url: '/api/login',
         data: JSON.stringify(data),
-        ContentType: 'application/json'
+        ContentType:'application/json'
       })
-      return promise1;
+      return promise;
     }
   };
 };

@@ -1,0 +1,18 @@
+.userInfo {
+  position: fixed;
+  top: 0;
+  right:0; 
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+.user {
+  width: 88px;
+  height: 30px;
+  background: #DEDEDE;
+  text-align: center;
+  line-height: 30px;
+}

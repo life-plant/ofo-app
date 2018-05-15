@@ -2,8 +2,8 @@ export default class LoginController {
   constructor($scope,loginService,$state) {
     const self = this;
     $scope.data = {
-      username:'',
-      password:''
+      username:'zhouquan',
+      password:'123456'
     }
 
 
@@ -16,7 +16,7 @@ export default class LoginController {
   login($scope,loginService,$state) {
     var prom = loginService.checkLogin($scope.data);
     prom.then(function(response){
-        $state.go('home',{info:response.data.data});
+      $state.go('useradmin',{username:$scope.data.username});
     })
   }
 }

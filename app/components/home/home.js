@@ -6,13 +6,14 @@ export default app => {
 
     $stateProvider
       .state('home', {
-        url: '/',
+        url: '/home',
         template: '<home></home>' ,//Essentially Treats the Home Directive as the Route View.
-        params: {info:null}
+        params: {username:null}
       });
   }).directive('home', homeComponent);
 
   if (ENVIRONMENT === 'test') {
+    console.log($);
     require('./home.test.js');
   }
 }
