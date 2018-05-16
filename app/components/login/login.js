@@ -5,7 +5,8 @@ export default app => {
     $stateProvider
       .state('login', {
         url: '/login',
-        template: '<login></login>' //Essentially Treats the Home Directive as the Route View.
+        template: '<login></login>', //Essentially Treats the Home Directive as the Route View.
+        cache: false
       });
   }).directive('login', loginComponent);
 

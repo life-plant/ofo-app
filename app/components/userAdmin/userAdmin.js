@@ -6,7 +6,8 @@ export default app => {
       .state('useradmin', {
         parent: 'home',
         url: '/useradmin',
-        template: '<user-admin></user-admin>' //Essentially Treats the Home Directive as the Route View.
+        template: '<user-admin></user-admin>', //Essentially Treats the Home Directive as the Route View.
+        cache: false
       });
   }).directive('userAdmin', userAdminComponent);
 

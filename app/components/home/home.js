@@ -8,7 +8,8 @@ export default app => {
       .state('home', {
         url: '/home',
         template: '<home></home>' ,//Essentially Treats the Home Directive as the Route View.
-        params: {username:null}
+        params: {username:null},
+        cache: false
       });
   }).directive('home', homeComponent);
 

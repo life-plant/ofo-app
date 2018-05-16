@@ -5,7 +5,7 @@ export default class LoginController {
       username:'zhouquan',
       password:'123456'
     }
-    $('#exampleModal').modal()
+    // $('#exampleModal').modal()
 
     $('.submit-btn').on('click',function(){
       self.login($scope,loginService,$state);

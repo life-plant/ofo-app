@@ -39,13 +39,7 @@ appServices(app);
 appFilter(app);
 
 app.run(function($state, loginService, $rootScope) {
-  // $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {  
-  //   console.log('stateChange');
-  //   if(toState.name!='login'){
-  //     $('active')
-  //     $('li.'+toState.name).addClass('active');
-  //   }
-  // }) 
+
   $state.go('login');
 
 });

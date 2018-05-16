@@ -1,5 +1,5 @@
 export default class StationController {
-  constructor() {
-    this.name = 'station';
+  constructor($scope, stationService) {
+    $scope.stations = stationService.getStations();
   }
 }

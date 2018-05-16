@@ -6,7 +6,8 @@ export default app => {
       .state('station', {
         parent: 'home',
         url: '/station',
-        template: '<station></station>' //Essentially Treats the Home Directive as the Route View.
+        template: '<station></station>' ,//Essentially Treats the Home Directive as the Route View.
+        cache: false
       });
   }).directive('station', stationComponent);
 
